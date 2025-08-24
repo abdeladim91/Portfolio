@@ -1,0 +1,112 @@
+
+.orbit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Rings just act as invisible tracks */
+.r1, .r2, .r3, .r4, .r5, .r6 {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* makes the path circular/elliptical */
+}
+
+/* Satellite (logo) always placed top of track */
+.r1 img, .r2 img, .r3 img, .r4 img, .r5 img, .r6 img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 40px; height: 40px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,.3));
+}
+
+/* Spin animations for orbits */
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes counter {
+  to { transform: rotate(-360deg); }
+}
+
+.r1 {
+  width: 210px; height: 290px;  /* a bit inside photo */
+  animation: spin 12s linear infinite;
+}
+.r2 {
+  width: 310px; height: 310px;
+  animation: spin 16s linear infinite reverse;
+}
+.r3 {
+  width: 270px; height: 310px;
+  animation: spin 20s linear infinite;
+}
+
+.r4 {
+  width: 300px; height: 320px;
+  animation: spin 24s linear infinite reverse;
+}
+.r5 {
+  width: 330px; height: 350px;
+  animation: spin 28s linear infinite;
+}
+.r6 {
+  width: 360px; height: 380px;
+  animation: spin 32s linear infinite reverse;
+}
+/* Counter-rotation so icons don’t spin themselves */
+.r1 .keep-upright { animation: counter 12s linear infinite; }
+.r2 .keep-upright { animation: counter 16s linear infinite; }
+.r3 .keep-upright { animation: counter 20s linear infinite; }
+.r4 .keep-upright { animation: counter 24s linear infinite; }
+.r5 .keep-upright { animation: counter 28s linear infinite; }
+.r6 .keep-upright { animation: counter 32s linear infinite; }
+
+/* Optional: make outer logos a touch smaller (looks balanced) */
+
+ .contact-card { position: relative; overflow: hidden; }
+
+    .cursor-glow, .cursor-core {
+      position: absolute;
+      top: 0; left: 0;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0;                 /* JS will drive opacity */
+      transition: opacity .25s ease;
+      border-radius: 9999px;
+    }
+
+    /* Big soft halo */
+    .cursor-glow {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle,
+        rgba(56,189,248,0.35) 0%,   /* cyan-400 */
+        rgba(20,184,166,0.25) 30%,  /* teal-500 */
+        rgba(0,0,0,0) 70%);
+      filter: blur(18px);
+      mix-blend-mode: screen;
+    }
+
+    /* Smaller bright core */
+    .cursor-core {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle,
+        rgba(94,234,212,0.70) 0%,   /* teal-300 */
+        rgba(56,189,248,0.35) 40%,  /* cyan-400 */
+        rgba(0,0,0,0) 70%);
+      filter: blur(6px);
+      mix-blend-mode: screen;
+    }
+
+
+
+
+
+
+
+
+
+
+

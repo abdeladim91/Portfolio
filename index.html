@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Abdeladim Bouita — Portfolio</title>
+
+  <!-- Tailwind (CDN, no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:,"/>
+  <meta name="description" content="Portfolio of Abdeladim Bouita — Web & App Developer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+
+<!-- GSAP + plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MotionPathPlugin.min.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body class="text-slate-800 bg-gradient-to-tr from-cyan-900 to-slate-900 selection:bg-brand-200 selection:text-slate-900 ">
+    
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur border-b border-teal-300">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-teal-300"><div>
+        <img src="img/logo.png" alt="Logo" class="w-20 h-20 inline-block mr-2">
+      </div></a>
+      <ul class="hidden sm:flex items-center gap-6 text-sm text-slate-100">
+        <li><a class="hover:text-teal-300" href="#projects">Projects</a></li>
+        <li><a class="hover:text-teal-300" href="#about">About</a></li>
+        <li><a class="hover:text-teal-300" href="#contact">Contact</a></li>
+        <li>
+          <a href="files/Abdeladim_Bouita_cv.pdf" class="inline-flex items-center gap-2 px-3 
+          py-1.5 rounded-md text-stone-900 bg-teal-300 hover:bg-teal-700 transition"
+             download>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M12 16V4m0 12l-3-3m3 3l3-3M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/>
+            </svg>
+            Download CV
+          </a>
+        </li>
+      </ul>
+      <button id="mobileBtn" class="sm:hidden p-2 rounded-md hover:bg-slate-100" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      </nav>
+
+       
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-slate-100">
+        <a class="hover:text-teal-300" href="#projects">Projects</a>
+        <a class="hover:text-teal-300" href="#about">About</a>
+        <a class="hover:text-teal-300" href="#contact">Contact</a>
+        <a href="Abdeladim_Bouita_CV.pdf" class="inline-flex w-max items-center gap-2 px-3 
+          py-1.5 rounded-md text-stone-900 bg-teal-300 hover:bg-teal-700 transition"
+             download>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M12 16V4m0 12l-3-3m3 3l3-3M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/>
+            </svg>
+            Download CV
+          </a></div>
+    </div>
+     
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <div class="absolute inset-0 -z-10  "></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="grid lg:grid-cols-2 items-center gap-10">
+
+<!-- Nucleus (photo) + orbiting logos -->
+<div class="relative flex items-center justify-center">
+  <!-- Photo -->
+  <div id="portrait" class="relative rounded-[20px] shadow-lg overflow-hidden w-[200px] h-[250px] z-10">
+    <img src="img/me.jpg" alt="Abdeladim Bouita" class="w-full h-full object-cover">
+  </div>
+
+  <!-- Orbiting logos -->
+  <div class="orbit">
+    <div class="r1">
+      <img src="img/bootstrap.svg" alt="Bootstrap" class="satellite keep-upright">
+    </div>
+    <div class="r2">
+      <img src="img/js.svg" alt="JavaScript" class="satellite keep-upright">
+    </div>
+    <div class="r3">
+      <img src="img/java.svg" alt="Java" class="satellite keep-upright">
+    </div>
+    <div class="r4">
+    <img src="img/php.svg" alt="PHP" class="satellite keep-upright">
+  </div>
+  <div class="r5">
+    <img src="img/mysql.svg" alt="MySQL" class="satellite keep-upright">
+  </div>
+  <div class="r6">
+    <img src="img/tailwind.svg" alt="TailwindCSS" class="satellite keep-upright">
+  </div>
+  </div>
+</div>
+
+
+        <!-- Intro text -->
+
+
+
+        <div class="margin-inline">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                
+            Hi<span class="text-teal-300">!</span> I am <span class="text-teal-300">
+            Abdeladim</span> and I am a <span class="text-teal-300">
+            Full</span>-<span class="text-teal-300">Stack</span> Developer, Welcome to my <span class="text-teal-300">portfolio</span>!
+          </h1>   
+            <p class="mt-4 text-slate-200">
+                I specialize in building responsive, accessible, and secure web applications using modern technologies.
+            </p>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+    
+       <!-- About -->
+  <section id="about" class="py-16 sm:py-20 border-y border-teal-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text1">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-teal-300">About Me</h2>
+          <p class="mt-4 text-white">
+                        I am Abdeladim Bouita, a passionate Web and App Developer with a background in Information Systems Security. Skilled in Java, PHP, JavaScript, MySQL, Bootstrap, and TailwindCSS, I enjoy building responsive, user-friendly, and secure applications.
+            My journey started in cybersecurity, which gave me strong problem-solving skills and a focus on secure coding practices. Today, I combine that knowledge with modern web technologies to design and develop digital solutions that are both functional and scalable.
+            I am eager to grow as a developer by contributing to real-world projects, collaborating with teams, and continuously learning new technologies.
+          </p>          
+        </div>
+        <div class="text2 bg-gradient-to-tr from-cyan-600 to-slate-600 rounded-xl p-6 ">
+          <h3 class="font-semibold text-teal-300">Highlights</h3>
+          <ul class="mt-3 space-y-2 text-sm text-white">
+            <li>• Strong attention to detail & layout accuracy</li>
+            <li>• Good understanding of forms, grids, and components</li>
+            <li>• Fast learner, enjoys feedback and iteration</li>
+            <li>• Security-first thinking for web apps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-teal-300">Projects</h2>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: Healthcare Landing -->
+        <article class="group bg-cyan-800 border border-teal-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="aspect-video overflow-hidden">
+            <img src="img/ssmc.PNG" alt="Healthcare Landing Page" class="w-full h-full object-cover group-hover:scale-[1.02] transition">
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-cyan-300">Healthcare Landing Page</h3>
+            <p class="mt-1 text-sm text-white"> A responsive healthcare landing page with modern layout, carousel, and sections for doctors, departments, and news. Built using Bootstrap 5 and custom CSS to ensure cross-device compatibility.</p>
+            <div class="mt-3 flex gap-2">
+              <a href="https://abdeladim91.github.io/ssmc-landing/" target="_blank" class="inline-flex items-center gap-2 px-3 
+          py-1.5 rounded-md text-stone-900 bg-teal-300 hover:bg-teal-700 transition">Live</a>
+              <a href="https://github.com/abdeladim91/ssmc-landing" target="_blank" class="px-3 py-1.5 text-sm rounded-md text-teal-300 bg-stone-900 hover:bg-white hover:text-stone-900">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: E-commerce Demo -->
+        <article class="group bg-cyan-800 border border-teal-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="aspect-video overflow-hidden">
+            <img src="img/PerfectionShop.PNG" alt="E-commerce Demo" class="w-full h-full object-cover group-hover:scale-[1.02] transition">
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-cyan-300">E-Commerce Demo</h3>
+            <p class="mt-1 text-sm text-white">Product grid + search + cart counter (localStorage). Bootstrap layout, responsive design.</p>
+            <div class="mt-3 flex gap-2">
+              <a href="https://abdeladim91.github.io/PerfectionShop/" target="_blank" class="inline-flex items-center gap-2 px-3 
+          py-1.5 rounded-md text-stone-900 bg-teal-300 hover:bg-teal-700 transition">Live</a>
+              <a href="https://github.com/abdeladim91/PerfectionShop" target="_blank" class="px-3 py-1.5 text-sm rounded-md text-teal-300 bg-stone-900 hover:bg-white hover:text-stone-900">Code</a>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Project 3: Weather Website -->
+      <article class="group bg-cyan-800 border border-teal-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="img/weather-app.PNG" alt="Weather Website" class="w-full h-full object-cover group-hover:scale-[1.02] transition">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-cyan-300">Weather Website</h3>
+          <p class="mt-1 text-sm text-white">
+            A real-time weather application that fetches data from an external API. Includes search by city, current conditions, and a 6-day forecast. Built with HTML, TailwindCSS, and JavaScript.
+          </p>
+          <div class="mt-3 flex gap-2">
+            <a href="https://abdeladim91.github.io/Weather-Website/" target="_blank" class="inline-flex items-center gap-2 px-3 
+        py-1.5 rounded-md text-stone-900 bg-teal-300 hover:bg-teal-700 transition">Live Demo</a>
+            <a href="https://github.com/abdeladim91/Weather-Website" target="_blank" class="px-3 py-1.5 text-sm rounded-md text-teal-300 bg-stone-900 hover:bg-white hover:text-stone-900">Code</a>
+          </div>
+        </div>
+      </article>
+
+        <!-- More projects can be added similarly -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="py-16 sm:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-teal-300">Contact me</h2>
+    <p class="mt-3 text-slate-300">
+      Open to junior developer roles and internships in web & app development.
+    </p>
+
+    <div class="mt-8 grid sm:grid-cols-2 gap-4 text-left">
+      <!-- Email card -->
+      <a href="mailto:Abdeladim91@gmail.com"
+         class="contact-card group p-4 bg-gradient-to-tr from-cyan-600 to-slate-600 border border-teal-300 rounded-xl">
+        <!-- Glow layers -->
+        <span class="cursor-glow"></span>
+        <span class="cursor-core"></span>
+        <div class="font-bold text-slate-900 group-hover:text-teal-200">Email</div>
+        <div class="text-sm text-white">Abdeladim91@gmail.com</div>
+      </a>
+
+      <!-- LinkedIn card -->
+      <a href="https://linkedin.com/in/abdeladim-bouita" target="_blank"
+         class="contact-card group p-4 bg-gradient-to-tr from-cyan-600 to-slate-600 border border-teal-300 rounded-xl">
+        <!-- Glow layers -->
+        <span class="cursor-glow"></span>
+        <span class="cursor-core"></span>
+        <div class="font-bold text-slate-900 group-hover:text-teal-200">LinkedIn</div>
+        <div class="text-sm text-white">linkedin.com/in/abdeladim-bouita</div>
+      </a>
+    </div>
+  </div>
+</section>
+  <footer class="py-6 bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+      © 2025 Abdeladim Bouita
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobileBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Smooth scroll (optional enhancement)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length > 1){
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({behavior:'smooth'});
+          menu?.classList.add('hidden');
+        }
+      });
+    });
+
+
+
+    
+     document.querySelectorAll('.contact-card').forEach(card => {
+      const glow = card.querySelector('.cursor-glow');
+      const core = card.querySelector('.cursor-core');
+
+      let rect, targetX = 0, targetY = 0, x = 0, y = 0, rafId = null;
+      const smooth = 0.12; // lower = more trailing, higher = snappier
+
+      function updateRect(){ rect = card.getBoundingClientRect(); }
+
+      function frame(){
+        // Smooth follow (lerp)
+        x += (targetX - x) * smooth;
+        y += (targetY - y) * smooth;
+
+        glow.style.left = x + 'px';
+        glow.style.top  = y + 'px';
+        core.style.left = x + 'px';
+        core.style.top  = y + 'px';
+
+        // Opacity follows cursor distance (center -> brighter)
+        const cx = rect.width / 2, cy = rect.height / 2;
+        const dx = x - cx, dy = y - cy;
+        const dist = Math.hypot(dx, dy);
+        const maxDist = Math.hypot(rect.width, rect.height) / 2;
+        const t = 1 - Math.min(dist / maxDist, 1); // 0..1
+        const o = 0.25 + 0.75 * (t * t);           // ease curve
+
+        glow.style.opacity = o;
+        core.style.opacity = Math.min(1, o + 0.1);
+
+        rafId = requestAnimationFrame(frame);
+      }
+
+      card.addEventListener('mouseenter', (e) => {
+        updateRect();
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+        x = targetX; y = targetY; // start at cursor
+        if (!rafId) rafId = requestAnimationFrame(frame);
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        targetX = e.clientX - rect.left;
+        targetY = e.clientY - rect.top;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        glow.style.opacity = 0;
+        core.style.opacity = 0;
+      });
+
+      window.addEventListener('resize', () => { if (rafId) updateRect(); });
+    });
+  </script>
+</body>
+</html>
